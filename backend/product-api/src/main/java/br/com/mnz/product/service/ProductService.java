@@ -30,7 +30,7 @@ public class ProductService {
         Product product = new Product();
         product.setName(productRequest.getName());
         product.setValue(productRequest.getValue());
-        product.setDesc(productRequest.getDesc());
+        product.setDescription(productRequest.getDescription());
         return new ProductResponse(productRepository.save(product));
     }
 

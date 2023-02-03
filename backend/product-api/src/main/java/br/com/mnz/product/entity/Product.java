@@ -20,5 +20,5 @@ public class Product {
     @Column
     private BigDecimal value;
     @Column
-    private String desc;
+    private String description;
 }

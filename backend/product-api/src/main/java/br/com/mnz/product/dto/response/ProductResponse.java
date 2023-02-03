@@ -18,6 +18,6 @@ public class ProductResponse {
     public ProductResponse(Product product) {
         this.name = product.getName();
         this.value = product.getValue();
-        this.desc = product.getDesc();
+        this.desc = product.getDescription();
     }
 }

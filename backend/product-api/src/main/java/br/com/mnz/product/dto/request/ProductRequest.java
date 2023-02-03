@@ -9,5 +9,5 @@ public class ProductRequest {
 
     private String name;
     private BigDecimal value;
-    private String desc;
+    private String description;
 }
