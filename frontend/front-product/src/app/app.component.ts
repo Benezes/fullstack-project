@@ -71,6 +71,8 @@ export class AppComponent {
       this.productService.removeProduct(product.id ?? 0).subscribe(
         {
           next: (res) => {
+            this.productForm.reset();
+            this.findProducts();
             alert("Product removed successfully");
           },
           error: (error) => {
