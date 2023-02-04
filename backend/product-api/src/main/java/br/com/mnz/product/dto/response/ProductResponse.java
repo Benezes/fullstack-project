@@ -13,11 +13,11 @@ public class ProductResponse {
 
     private String name;
     private BigDecimal value;
-    private String desc;
+    private String description;
 
     public ProductResponse(Product product) {
         this.name = product.getName();
         this.value = product.getValue();
-        this.desc = product.getDescription();
+        this.description = product.getDescription();
     }
 }
