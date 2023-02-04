@@ -21,7 +21,7 @@ Run the frontend
 ng serve
 ```
 
-#Paths
+# Paths
 
 ## Paths - Product
 
