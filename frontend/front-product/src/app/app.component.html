@@ -1,1 +1,57 @@
 <app-nav-bar></app-nav-bar>
+
+<div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title"><h4>Product</h4></div>
+        <form [formGroup]="productForm" (ngSubmit)="save()">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="value">Price</label>
+            <input type="number" class="form-control" id="value" formControlName="value">
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea name="description" id="description" formControlName="description" rows="3" class="form-control"></textarea>
+          </div>
+          <br />
+          <button class="btn btn-primary" [disabled]="productForm.invalid">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <br />
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+        <div class="card-title"><h4>List of Products</h4></div>
+        <table class="table">
+            <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Action</th>
+            </thead>
+            <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.value}}</td>
+            <td>{{product.description}}</td>
+            <td style="width:100px">
+                <div>
+                    <button (click)="remove(product)" class="btn btn-danger btn-sm" type="button">Remove</button>
+                </div>
+            </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>
+<br />
+  
